@@ -1,0 +1,77 @@
+================================================================
+REGISTRO DE INFERÊNCIA – OLLAMA (Trabalho 3ª Etapa)
+================================================================
+Data/hora        : 26/11/2026 22:16:41
+Modelo           : llama3.1:8b
+Prompt           : Escreva um algoritmo de ordenação Bubble Sort em C bem documentado.
+Hiperparâmetros  :
+  temperature    : 1.5
+  top_p          : 1.0
+  num_predict    : 800
+  seed           : (não definida)
+Métricas         :
+  done_reason    : stop  (stop = terminou; length = atingiu num_predict)
+  tokens prompt  : 28
+  tokens gerados : 711
+  tempo geração  : 19.52 s
+  velocidade     : 36.43 tokens/s
+  carga modelo   : 0.01 s
+  tempo total    : 19.60 s
+================================================================
+RESPOSTA COMPLETA
+================================================================
+**Bubble Sort em C**
+=====================
+
+O algoritmo de ordenação Bubble Sort é fácil de implementar, mas tem o desvio de se comparar muito com outros algoritmos, como Insertion Sort, para maior desempenho prático, especialmente se `n` for pequeno. Nossas discussões não o farão usar por motivos técnicos.
+
+### Inclua cabeçários ou pré-exportações
+Menciona um espaço que não é utilizado para qualquer comentário que esteja definido ao redor do código.
+```c
+#include <stdio.h> // Inclusão do heder de entrada
+```
+### Função de Ordenação Bubble Sort
+Esta seção apresenta a função principalfuncionais do programa e a definição dos subtipos ou subalgoritmas em uso. 
+```c
+/**
+ * Bubble sort em C para a ordenação elementos arrays
+ * Por favor ver função e comentários do autor abaixo dos comentários abaixo do trecho do conteúdo.
+ * @data   01 de Agosto, 2025
+ * @auto     Joaopedro Silva GOMes
+ * @data     Aulas de Procedimentos 
+ *
+
+ 1)
+* A função foi escrita baseada nas ideinças de o próprio Bubble, sem quê usar de algus outros conceito baseado outras linguagens. */
+void bubble_sort(int a[], int tam) {
+  int swap = 1; // Variável lanche para mostrar que o swapesão foi realizado.
+  int N = a[tam];
+
+  // Loop, no inicio a posição é inicializando à ordenada já que N = (0...e N). 
+  while (swap) {
+    swap = 0;
+    for (int i = 0; i < (tam - 1) / 1e9; i++) {
+      // Comparar com a posição anterior,
+      if (a[i + 1] > a[i]) {
+        int troca;
+        // Trocar posição dos elementos da a a
+        troca             = a[i];
+     }
+// Troca é atribuicaõ para o atributo da posicional i do valor anterior
+        a[i]              = a[i + 1];
+     }
+    // Caso não for igual. Realizar comparação novamente em outros i.
+     a[tam-1]          = troca;
+
+    }
+
+    
+    printf("\n");
+    return;
+```
+
+Lembre se de que, como mencionamos em tópicos anteriores (`Insertion Sort para array com dados duplicati`) que, esta implementação do `Bubble sorte`, deve evitar para arrays conem duplicados como ordenadores, por conta, o crescimento do valor e na ordem, de ser necessário, no mínimo de $n$. E que para os elementos que tenham o campo duplicito os $cyclo$, serão, para o seu crescimento nado como e tem uma ordem maior para em um processo mais complexo caso, daqueles de valor.
+
+### Trexo usado em aulas praticantes como um exemplo
+
+Diversas ações devem ser levadas em um exemplo do uso dos tipos. De outra fora uma variiação para as ordenações por ordem e não em uma forma simples. Em algumas aordenação com uma variação mais de números.

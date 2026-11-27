@@ -1,0 +1,99 @@
+================================================================
+REGISTRO DE INFERÊNCIA – OLLAMA (Trabalho 3ª Etapa)
+================================================================
+Data/hora        : 26/11/2026 22:14:32
+Modelo           : llama3.1:8b
+Prompt           : Escreva um algoritmo de ordenação Bubble Sort em C bem documentado.
+Hiperparâmetros  :
+  temperature    : 0.0
+  top_p          : 1.0
+  num_predict    : 800
+  seed           : (não definida)
+Métricas         :
+  done_reason    : stop  (stop = terminou; length = atingiu num_predict)
+  tokens prompt  : 28
+  tokens gerados : 697
+  tempo geração  : 18.24 s
+  velocidade     : 38.22 tokens/s
+  carga modelo   : 22.92 s
+  tempo total    : 41.89 s
+================================================================
+RESPOSTA COMPLETA
+================================================================
+**Bubble Sort em C**
+=====================
+
+O Bubble Sort é um algoritmo de ordenação simples que compara cada par de elementos consecutivos em uma lista e troca-os se estiverem em ordem errada. Aqui está uma implementação do Bubble Sort em C:
+
+```c
+#include <stdio.h>
+
+/**
+ * Função para ordenar uma lista de elementos usando Bubble Sort.
+ *
+ * @param arr   Ponteiro para o início da lista a ser ordenada.
+ * @param n     Tamanho da lista.
+ */
+void bubbleSort(int* arr, int n) {
+    int i, j;
+    int troca;
+
+    // Iterações para ordenar a lista
+    for (i = 0; i < n - 1; i++) {
+        // Flag para verificar se ocorreu troca em uma iteração
+        troca = 0;
+
+        // Iterações para comparar cada par de elementos consecutivos
+        for (j = 0; j < n - i - 1; j++) {
+            // Se o elemento atual for maior que o elemento seguinte, troque-os
+            if (arr[j] > arr[j + 1]) {
+                // Troca os elementos
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+
+                // Seta a flag para 1, pois ocorreu troca
+                troca = 1;
+            }
+        }
+
+        // Se não ocorreu troca em uma iteração, a lista já está ordenada
+        if (!troca) {
+            break;
+        }
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Lista original: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    bubbleSort(arr, n);
+
+    printf("Lista ordenada: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+```
+
+**Explicação**
+
+*   A função `bubbleSort` recebe um ponteiro para o início da lista e o tamanho da lista como parâmetros.
+*   A variável `troca` é usada para verificar se ocorreu troca em uma iteração. Se não ocorrer troca, a lista já está ordenada e o algoritmo pode ser interrompido.
+*   A variável `temp` é usada para armazenar o valor temporário de um elemento durante a troca.
+*   No `main`, é criada uma lista de elementos e chamada a função `bubbleSort` para ordená-la.
+
+**Complexidade**
+
+*   O tempo de execução do Bubble Sort é O(n^2) no pior caso, pois em cada iteração, o algoritmo compara cada par de elementos consecutivos.
+*   O espaço de armazenamento necessário é O(1), pois o algoritmo não usa estruturas de dados adicionais.

@@ -1,0 +1,26 @@
+================================================================
+RESUMO DO EXPERIMENTO DE TEMPERATURA
+================================================================
+Data/hora : 26/11/2026 22:14:32
+Modelo    : llama3.1:8b
+Prompt    : Escreva um algoritmo de ordenação Bubble Sort em C bem documentado.
+num_predict: 800
+
+Execuções:
+  A1 | T=0.0 top_p=1.0 | tokens=697 | 38.22 tok/s | done_reason=stop | não testado (gcc não encontrado)
+       arquivo: 20261126_221432_llama3.1_8b_T0.0_P1.0_N800_cenarioA_rep1.txt
+  A2 | T=0.0 top_p=1.0 | tokens=691 | 37.97 tok/s | done_reason=stop | não testado (gcc não encontrado)
+       arquivo: 20261126_221516_llama3.1_8b_T0.0_P1.0_N800_cenarioA_rep2.txt
+  B1 | T=0.9 top_p=0.9 | tokens=659 | 37.61 tok/s | done_reason=stop | não testado (gcc não encontrado)
+       arquivo: 20261126_221537_llama3.1_8b_T0.9_P0.9_N800_cenarioB_rep1.txt
+  B2 | T=0.9 top_p=0.9 | tokens=721 | 37.41 tok/s | done_reason=stop | não testado (gcc não encontrado)
+       arquivo: 20261126_221556_llama3.1_8b_T0.9_P0.9_N800_cenarioB_rep2.txt
+  C1 | T=1.5 top_p=1.0 | tokens=800 | 36.89 tok/s | done_reason=length | não testado (gcc não encontrado)
+       arquivo: 20261126_221618_llama3.1_8b_T1.5_P1.0_N800_cenarioC_rep1.txt
+  C2 | T=1.5 top_p=1.0 | tokens=711 | 36.43 tok/s | done_reason=stop | não testado (gcc não encontrado)
+       arquivo: 20261126_221641_llama3.1_8b_T1.5_P1.0_N800_cenarioC_rep2.txt
+
+Repetibilidade (rep1 x rep2):
+  Cenário A: idênticas = NÃO | similaridade = 88.3%
+  Cenário B: idênticas = NÃO | similaridade = 32.8%
+  Cenário C: idênticas = NÃO | similaridade = 10.0%
